@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #FBFBFB!important;
+}
+
+textarea:focus, input:focus, select:focus{
+    outline: 0;
+} 
+
+.icone {
+    color: #404040;
+}

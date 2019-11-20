@@ -1,0 +1,41 @@
+<div class="row mt-2 mb-3 align-items-center">
+    <div class="col-7">
+        <span class="py-3 px-2 rounded-pill campo-buscar">
+            <fa-icon [icon]="faSearch" class="mx-1 icone"></fa-icon>
+            <input type="text" class="border-0 bg-transparent w-75" placeholder="Digite o nome da sala" (input)="getSalas($event.target.value)" />
+        </span>
+    </div>
+    <div class="col-5 text-right">
+        <p class="d-none d-md-inline-block">Filtrar:</p>
+        <select [(ngModel)]='disponibilidade'class="bg-transparent mx-1 p-2 rounded-pill" (change)="filtrarDisponibilidade($event.target.value)">
+            <option value="">Todas as salas</option>
+            <option value="Disponivel">Disponíveis</option>
+            <option value="Indisponivel">Indisponíveis</option>
+        </select>
+    </div>
+</div>
+<div class="table-responsive-sm">
+    <table class="table">
+        <thead class="border-0">
+            <tr class="row">
+                <th class="col-2 text-center">#</th>
+                <th class="col-md-3 col-sm-4 col-4">Nome</th>
+                <th class="col-4 d-none d-md-table-cell text-center">Descrição</th>
+                <th class="col-md-2 col-sm-4 col-4 text-center">Disponibilidade</th>
+                <th class="col-md-1 col-sm-2 col-2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <p class="col-12 text-center" *ngIf="!salas.length > 0">Não há salas cadastradas</p>
+            <tr class="row"  *ngFor='let sala of salasTemporarias'>
+                <td class="col-2 text-center font-weight-bold">{{ sala.id }}</td>
+                <td class="col-md-3 col-sm-4 col-4">{{ sala.nome }}</td>
+                <td class="col-4 d-none d-md-table-cell text-justify">{{sala.descricao }}</td>
+                <td class="col-md-2 col-sm-4 col-4 text-center {{ sala.disponibilidade === 'Disponivel' ? 'text-success' : 'text-danger'}}">{{ sala.disponibilidade }}</td>
+                <td class="col-md-1 col-sm-2 col-2 text-right">
+                    <a routerLink="/descricao-sala/{{ sala.id }}" class='icone'><fa-icon [icon]="faChevronRight" size='3x'></fa-icon></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

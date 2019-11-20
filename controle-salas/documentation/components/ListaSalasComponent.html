@@ -1,0 +1,969 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>controle-salas documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">controle-salas documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Digite para pesquisar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li>ListaSalasComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Arquivo</h3>
+</p>
+<p class="comment">
+    <code>src/app/componentes/lista-salas/lista-salas.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Descrição</h3>
+    </p>
+    <p class="comment">
+        <p>lista-salas componente</p>
+<p>Exibe a lista de salas que estão cadastradas no momento</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-lista-salas</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./lista-salas.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./lista-salas.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propriedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#disponibilidade">disponibilidade</a>
+                            </li>
+                            <li>
+                                <a href="#faChevronRight">faChevronRight</a>
+                            </li>
+                            <li>
+                                <a href="#faSearch">faSearch</a>
+                            </li>
+                            <li>
+                                <a href="#salas">salas</a>
+                            </li>
+                            <li>
+                                <a href="#salasTemporarias">salasTemporarias</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#buscarDados">buscarDados</a>
+                            </li>
+                            <li>
+                                <a href="#filtrarDisponibilidade">filtrarDisponibilidade</a>
+                            </li>
+                            <li>
+                                <a href="#getSalas">getSalas</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#resetarSalas">resetarSalas</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Construtor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_salasService: <a href="../injectables/SalasService.html">SalasService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido em <a href="" data-line="35" class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Injeta um objeto do tipo [SalasService] para obter os dados da API</p>
+</div>
+                            <div>
+                                    <b>Parâmetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nome</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_salasService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SalasService.html" target="_self" >SalasService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Não
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buscarDados"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            buscarDados
+                        </b>
+                        <a href="#buscarDados"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>buscarDados()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido em <a href="" data-line="59"
+                            class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Executa todas as requisições do tipo GET necessárias</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Retorna : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filtrarDisponibilidade"></a>
+                    <span class="name">
+                        <b>
+                            filtrarDisponibilidade
+                        </b>
+                        <a href="#filtrarDisponibilidade"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filtrarDisponibilidade()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido em <a href="" data-line="97"
+                            class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Filtra as salas com base na disponibilidade</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Retorna : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSalas"></a>
+                    <span class="name">
+                        <b>
+                            getSalas
+                        </b>
+                        <a href="#getSalas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSalas(nomeSala: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido em <a href="" data-line="79"
+                            class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:79</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Busca as salas com o nome iniciados pelo valor digitado pelo usuário e os filtra com base na disponibilidade</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parâmetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nome</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                    <td>Valor padrão</td>
+                                    <td>Descrição</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>nomeSala</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Não
+                                    </td>
+
+                                    <td>
+                                        <code>&quot;&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Nome da sala usado na busca</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Retorna : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido em <a href="" data-line="51"
+                            class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtem os dados da API ao ser iniciado</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Retorna : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetarSalas"></a>
+                    <span class="name">
+                        <b>
+                            resetarSalas
+                        </b>
+                        <a href="#resetarSalas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetarSalas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido em <a href="" data-line="68"
+                            class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:68</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>A lista de salas volta a ser um objeto vazio</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Retorna : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Propriedades
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disponibilidade"></a>
+                        <span class="name">
+                            <b>
+                            disponibilidade</b>
+                            <a href="#disponibilidade"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor padrão : </i><code>&quot;&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido em <a href="" data-line="35" class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Usado para filtrar a disponibilidade da sala</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faChevronRight"></a>
+                        <span class="name">
+                            <b>
+                            faChevronRight</b>
+                            <a href="#faChevronRight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor padrão : </i><code>faChevronRight</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido em <a href="" data-line="111" class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:111</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Icone de seta para direita</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faSearch"></a>
+                        <span class="name">
+                            <b>
+                            faSearch</b>
+                            <a href="#faSearch"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor padrão : </i><code>faSearch</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido em <a href="" data-line="116" class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:116</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Icone de lupa</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="salas"></a>
+                        <span class="name">
+                            <b>
+                            salas</b>
+                            <a href="#salas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="../classes/Sala.html" target="_self" >Sala[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor padrão : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido em <a href="" data-line="25" class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Lista onde serão armazenadas as salas obtidas pela API</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="salasTemporarias"></a>
+                        <span class="name">
+                            <b>
+                            salasTemporarias</b>
+                            <a href="#salasTemporarias"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="../classes/Sala.html" target="_self" >Sala[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor padrão : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido em <a href="" data-line="30" class="link-to-prism">src/app/componentes/lista-salas/lista-salas.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Lista intermediaria onde serão armazenadas as salas para serem manipuladas</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { faChevronRight, faSearch } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+
+import { Sala } from &#x27;../../models/Sala&#x27;;
+
+import { SalasService } from &quot;../../services/sala/salas.service&quot;
+
+/**
+ * lista-salas componente
+ * 
+ * Exibe a lista de salas que estão cadastradas no momento
+ *
+ */
+@Component({
+  selector: &#x27;app-lista-salas&#x27;,
+  templateUrl: &#x27;./lista-salas.component.html&#x27;,
+  styleUrls: [&#x27;./lista-salas.component.css&#x27;]
+})
+export class ListaSalasComponent implements OnInit {
+
+  /**
+   * 
+   * Lista onde serão armazenadas as salas obtidas pela API
+   */
+  salas: Sala[] &#x3D; [];
+  /**
+   * 
+   * Lista intermediaria onde serão armazenadas as salas para serem manipuladas
+   */
+  salasTemporarias : Sala[] &#x3D; [];
+  /**
+   * 
+   * Usado para filtrar a disponibilidade da sala
+   */
+  disponibilidade: string &#x3D; &quot;&quot;;
+
+  /**
+   * 
+   * Injeta um objeto do tipo [SalasService] para obter os dados da API
+   * 
+   */
+  constructor(
+    private _salasService: SalasService
+  ) { }
+
+  /**
+   * 
+   * Obtem os dados da API ao ser iniciado
+   * 
+   */
+  ngOnInit() {
+    this.buscarDados();
+  }
+  /**
+   *
+   * Executa todas as requisições do tipo GET necessárias
+   * 
+   */
+  async buscarDados() {
+    await this.getSalas();
+  }
+
+ /**
+   *
+   * A lista de salas volta a ser um objeto vazio
+   * 
+   */
+  resetarSalas() {
+    this.salas &#x3D; [];
+  } 
+
+  /**
+   * 
+   * Busca as salas com o nome iniciados pelo valor digitado pelo usuário e os filtra com base na disponibilidade
+   * 
+   * @param {string} nomeSala  Nome da sala usado na busca
+   * 
+   */
+  getSalas(nomeSala: string &#x3D; &quot;&quot;) {
+    this.resetarSalas();
+    this._salasService.list(nomeSala).subscribe(resp &#x3D;&gt; {
+      for (const sala of resp.body) {
+        this.salas.push(
+          new Sala(sala.nome, sala.descricao, sala.id, sala.disponibilidade)
+        );
+      }
+      this.salasTemporarias &#x3D; this.salas;
+      this.filtrarDisponibilidade();
+    });
+  }
+
+  /**
+   * 
+   * Filtra as salas com base na disponibilidade
+   */
+
+  filtrarDisponibilidade() {
+    if (this.disponibilidade &#x3D;&#x3D;&#x3D; &quot;&quot;) {
+      this.salasTemporarias &#x3D; this.salas;
+    } else {
+      this.salasTemporarias &#x3D; this.salas.filter((sala) &#x3D;&gt; {
+        return sala.disponibilidade &#x3D;&#x3D;&#x3D; this.disponibilidade ? sala: &#x27;&#x27;;
+      });
+    }
+  }
+
+  /**
+   * 
+   * Icone de seta para direita
+   */
+  faChevronRight &#x3D; faChevronRight;
+  /**
+   * 
+   * Icone de lupa
+   */
+  faSearch &#x3D; faSearch;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;row mt-2 mb-3 align-items-center&quot;&gt;
+    &lt;div class&#x3D;&quot;col-7&quot;&gt;
+        &lt;span class&#x3D;&quot;py-3 px-2 rounded-pill campo-buscar&quot;&gt;
+            &lt;fa-icon [icon]&#x3D;&quot;faSearch&quot; class&#x3D;&quot;mx-1 icone&quot;&gt;&lt;/fa-icon&gt;
+            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;border-0 bg-transparent w-75&quot; placeholder&#x3D;&quot;Digite o nome da sala&quot; (input)&#x3D;&quot;getSalas($event.target.value)&quot; /&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-5 text-right&quot;&gt;
+        &lt;p class&#x3D;&quot;d-inline-block&quot;&gt;Filtrar:&lt;/p&gt;
+        &lt;select [(ngModel)]&#x3D;&#x27;disponibilidade&#x27;class&#x3D;&quot;bg-transparent mx-1 p-2 rounded-pill&quot; (change)&#x3D;&quot;filtrarDisponibilidade($event.target.value)&quot;&gt;
+            &lt;option value&#x3D;&quot;&quot;&gt;Todas as salas&lt;/option&gt;
+            &lt;option value&#x3D;&quot;Disponivel&quot;&gt;Disponíveis&lt;/option&gt;
+            &lt;option value&#x3D;&quot;Indisponivel&quot;&gt;Indisponíveis&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;table class&#x3D;&quot;table&quot;&gt;
+    &lt;thead class&#x3D;&quot;border-0&quot;&gt;
+        &lt;tr class&#x3D;&quot;row&quot;&gt;
+            &lt;th class&#x3D;&quot;col-2 text-center&quot;&gt;#&lt;/th&gt;
+            &lt;th class&#x3D;&quot;col-3&quot;&gt;Nome&lt;/th&gt;
+            &lt;th class&#x3D;&quot;col-4 d-none d-md-table-cell text-center&quot;&gt;Descrição&lt;/th&gt;
+            &lt;th class&#x3D;&quot;col-2 text-center&quot;&gt;Disponibilidade&lt;/th&gt;
+            &lt;th class&#x3D;&quot;col-1&quot;&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;p class&#x3D;&quot;col-12 text-center&quot; *ngIf&#x3D;&quot;!salas.length &gt; 0&quot;&gt;Não há salas cadastradas&lt;/p&gt;
+        &lt;tr class&#x3D;&quot;row&quot;  *ngFor&#x3D;&#x27;let sala of salasTemporarias&#x27;&gt;
+            &lt;td class&#x3D;&quot;col-2 text-center font-weight-bold&quot;&gt;{{ sala.id }}&lt;/td&gt;
+            &lt;td class&#x3D;&quot;col-3&quot;&gt;{{ sala.nome }}&lt;/td&gt;
+            &lt;td class&#x3D;&quot;col-4 d-none d-md-table-cell text-justify&quot;&gt;{{sala.descricao }}&lt;/td&gt;
+            &lt;td class&#x3D;&quot;col-2 text-center {{ sala.disponibilidade &#x3D;&#x3D;&#x3D; &#x27;Disponivel&#x27; ? &#x27;text-success&#x27; : &#x27;text-danger&#x27;}}&quot;&gt;{{ sala.disponibilidade }}&lt;/td&gt;
+            &lt;td class&#x3D;&quot;col-1 text-right&quot;&gt;
+                &lt;a routerLink&#x3D;&quot;/descricao-sala/{{ sala.id }}&quot; class&#x3D;&#x27;icone&#x27;&gt;&lt;fa-icon [icon]&#x3D;&quot;faChevronRight&quot; size&#x3D;&#x27;3x&#x27;&gt;&lt;/fa-icon&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./lista-salas.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+thead tr th {
+    border: 0
+}
+
+tbody tr.row:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+    transform: scale(1.01);
+    transition: transform 0.1s ease;
+}
+
+.campo-buscar {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento HTML</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento HTML com diretiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="row mt-2 mb-3 align-items-center">    <div class="col-7">        <span class="py-3 px-2 rounded-pill campo-buscar">            <fa-icon [icon]="faSearch" class="mx-1 icone"></fa-icon>            <input type="text" class="border-0 bg-transparent w-75" placeholder="Digite o nome da sala" (input)="getSalas($event.target.value)" />        </span>    </div>    <div class="col-5 text-right">        <p class="d-inline-block">Filtrar:</p>        <select [(ngModel)]=\'disponibilidade\'class="bg-transparent mx-1 p-2 rounded-pill" (change)="filtrarDisponibilidade($event.target.value)">            <option value="">Todas as salas</option>            <option value="Disponivel">Disponíveis</option>            <option value="Indisponivel">Indisponíveis</option>        </select>    </div></div><table class="table">    <thead class="border-0">        <tr class="row">            <th class="col-2 text-center">#</th>            <th class="col-3">Nome</th>            <th class="col-4 d-none d-md-table-cell text-center">Descrição</th>            <th class="col-2 text-center">Disponibilidade</th>            <th class="col-1"></th>        </tr>    </thead>    <tbody>        <p class="col-12 text-center" *ngIf="!salas.length > 0">Não há salas cadastradas</p>        <tr class="row"  *ngFor=\'let sala of salasTemporarias\'>            <td class="col-2 text-center font-weight-bold">{{ sala.id }}</td>            <td class="col-3">{{ sala.nome }}</td>            <td class="col-4 d-none d-md-table-cell text-justify">{{sala.descricao }}</td>            <td class="col-2 text-center {{ sala.disponibilidade === \'Disponivel\' ? \'text-success\' : \'text-danger\'}}">{{ sala.disponibilidade }}</td>            <td class="col-1 text-right">                <a routerLink="/descricao-sala/{{ sala.id }}" class=\'icone\'><fa-icon [icon]="faChevronRight" size=\'3x\'></fa-icon></a>            </td>        </tr>    </tbody></table></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CabecalhoComponent', 'selector': 'app-cabecalho'},{'name': 'DescricaoSalaComponent', 'selector': 'app-descricao-sala'},{'name': 'FormularioSalaComponent', 'selector': 'app-formulario-sala'},{'name': 'ListarSalasComponent', 'selector': 'app-listar-salas'},{'name': 'ListaSalasComponent', 'selector': 'app-lista-salas'},{'name': 'ModalSimplesComponent', 'selector': 'app-modal-simples'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ListaSalasComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">Nenhum resultado correspondente "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ListaSalasComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

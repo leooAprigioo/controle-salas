@@ -1,0 +1,100 @@
+<section class="container-fluid">
+    <app-cabecalho titulo='{{ sala.nome }}' descricao='{{ sala.descricao }}'></app-cabecalho>
+    <div class="row justify-content-center py-5">
+        <div class="col-6 text-center">
+            <a routerLink="/formulario-sala/put" [queryParams]="sala" class="btn btn-warning btn-large" ><fa-icon [icon]="faEdit" class="px-1"></fa-icon>Editar sala</a>
+        </div>
+        <div class="col-6 text-center">
+            <button class="btn btn-outline-danger btn-large" data-toggle="modal" data-target="#excluirSala"><fa-icon [icon]="faTrashAlt" class="px-1"></fa-icon>Excluir sala</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4 class="text-center">Agendamentos</h4>
+        </div>
+        <div class="col-12 text-right mt-3">
+            <button class="btn btn-info btn-block font-weight-bold" (click)='alternarFormulario()'><fa-icon [icon]='faPlus' class="mx-1"></fa-icon>Novo agendamento</button>
+        </div>
+        <form class="w-100 container-fluid mt-3" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <div class="row" *ngIf="formulario">
+                <div class="col-sm-12 col-md-6 mt-3">
+                    <input type="text" class="form-control" name="nomeResponsavel" formControlName="nomeResponsavel" placeholder="Nome do responsável" required/>
+                    <div *ngIf="enviado && form.nomeResponsavel.errors">
+                        <small class="text-small text-danger" *ngIf="form.nomeResponsavel.errors.required">Por favor, informe o nome do responsável</small>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 mt-3">
+                    <input type="text" class="form-control" name="nomeTurma" formControlName="nomeTurma" placeholder="Nome da turma"/>
+                    <div *ngIf="enviado && form.nomeTurma.errors">
+                        <small class="text-small text-danger" *ngIf="form.nomeTurma.errors.required">Por favor, informe o nome da turma</small>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-center text-secondary">Selecione os dias que deseja agendar a sala</p>
+                    <igx-calendar 
+                        #calendario
+                        [selection]="tipoFormulario"
+                        (onSelection)="dataSelecionada($event)"
+                        [locale]='pt-br'
+                        ></igx-calendar>
+                </div>
+            </div>
+            <div class="row" *ngIf="formulario">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success font-weight-bold btn-block">Agendar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+<!-- Excluir sala modal -->
+<div class="modal fade" id="excluirSala" tabindex="-1" role="dialog" aria-labelledby="excluirSalaLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="excluirSalaLabel">Excluir sala</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Deseja realmente exlcuir a sala Nome da sala
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary font-weight-bold" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-outline-danger font-weight-bold" data-dismiss="modal" (click)="excluirSala(sala.id)">Excluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Agendada selecionado Modal -->
+<div class="modal fade" id="descricaoAgendamento" tabindex="-1" role="dialog" aria-labelledby="descricaoAgendamentoTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="descricaoAgendamentoTitle">Agendamento</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <h5 class="text-center">{{ modalSimples.titulo }}</h5>
+            <p>Reservado por: <span class="font-weight-bold">{{ modalSimples.agendamento.nomeResponsavel }}</span></p>
+            <p>Reservado para a turma: <span class="font-weight-bold">{{ modalSimples.agendamento.nomeTurma }}</span></p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-dismiss="modal" (click)="excluirAgendamento(modalSimples.agendamento.id_agendamento)" >Cancelar agendamento</button>
+            <button type="button" class="btn btn-secondary font-weight-bold" data-dismiss="modal">Sair</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<app-modal-simples [titulo]="modalSimples.titulo" [mensagem]="modalSimples.mensagem" [redirecionador]="modalSimples.redirecionador"></app-modal-simples>

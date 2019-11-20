@@ -1,0 +1,13 @@
+header a {
+    cursor: pointer;
+}
+
+header a:hover {
+    color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+    header h3 {
+        font-size: 1.5rem!important;
+    }
+}

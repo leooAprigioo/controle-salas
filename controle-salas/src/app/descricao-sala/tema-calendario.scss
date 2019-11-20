@@ -1,0 +1,18 @@
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+$my-calendar-theme: igx-calendar-theme(
+  $content-background: #FBFBFB,
+  $header-text-color: #ffffff,
+  $date-current-text-color: #2dabe8,
+  $picker-arrow-color: #2dabe8,
+  $picker-arrow-hover-color: #000000,
+  $date-selected-background: #1c73e4,
+  
+  $picker-text-hover-color: #1c73e4
+);
+
+:host{
+    ::ng-deep{
+        @include igx-calendar($my-calendar-theme);
+    }
+}

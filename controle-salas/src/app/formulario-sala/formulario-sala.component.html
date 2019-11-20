@@ -1,0 +1,26 @@
+<section class="container-fluid">
+    <app-cabecalho titulo='Cadastrar sala' descricao='Preencha os campos para cadastrar uma nova sala'></app-cabecalho>
+    <form class="my-5" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <div class="row form-group justify-content-center">
+            <div class="col-sm-12 col-md-7">
+                <input type="text" class="form-control" placeholder='Nome da sala' name='nome' formControlName='nome' required>
+                <div *ngIf="enviado && form.nome.errors">
+                    <small class="text-small text-danger" *ngIf="form.nome.errors.required">Por favor, informe o nome da sala</small>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row form-group justify-content-center">
+            <div class="col-sm-12 col-md-7">
+                <textarea class="form-control" placeholder="Descrição (opcional)" name='descricao' formControlName='descricao'></textarea>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <button class="btn btn-success btn-block">Salvar</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<app-modal-simples [titulo]="modal.titulo" [mensagem]="modal.mensagem"></app-modal-simples>

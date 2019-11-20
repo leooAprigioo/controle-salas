@@ -1,0 +1,12 @@
+{
+    "name": "controle-salas-api",
+    "version": "1.0.0",
+    "description": "WebAPI do sistema controle de salas",
+    "title": "Documentação - API",
+    "url" : "localhost:80",
+    "order": [
+        "Listar Salas",
+        "Obter Sala",
+        "Adicionar Sala"
+      ]
+}

@@ -1,0 +1,14 @@
+
+thead tr th {
+    border: 0
+}
+
+tbody tr.row:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+    transform: scale(1.01);
+    transition: transform 0.1s ease;
+}
+
+.campo-buscar {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+}
